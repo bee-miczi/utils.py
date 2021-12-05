@@ -303,7 +303,14 @@ while True:
                 break
             
         print("exiting program!")
-
+    elif utChoose == "todo":
+        print("Welcome to to do")
+        while True:
+            todo = []
+            add_todo = input()
+            todo.append(add_todo)
+            for i in todo:
+                print(i)
         time.sleep(1)
     elif utChoose == "copyrigth":
         print(copyrigth)
