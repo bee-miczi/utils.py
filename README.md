@@ -27,6 +27,7 @@ Windows 11: search for windows termianl and type pip install names
 Mac OS: search for terminal and type pip install names (May not work, use pip3 install names intead)
 
 Linux: search for terminal and type pip install names
+(On linux you will need to download from src)
 
 If you get all rigth just run the .py file and your good to go!
 
