@@ -1,6 +1,6 @@
 # Utilty.py
 
-Utility.py is a file that offerres cool cli tools and games.
+Utility.py is a utility that offerres cool cli tools and games.
 Currently the offerd games/items are:
 get the number, countdown, random name generator, full cpu prank and rock paper sciccors
 
