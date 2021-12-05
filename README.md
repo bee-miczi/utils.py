@@ -6,7 +6,7 @@ get the number, countdown, random name generator, full cpu prank and rock paper 
 
 ## Install
 
-First go to realeses and download the lates version, depending on your platform:
+First go to realeses and download the latest version, depending on your platform:
 
 Windows: Open and run the exe
 
@@ -15,6 +15,8 @@ Mac Os: Open and run the pkg
 Linux: Use your pakage manager to download the latest version of python
 
 The file will install the latest version of python up to that date.
+
+(Note: If a new version of python breakes the program before we can provide, please consider downgrading your python version!)
 
 ### Extra dependencies
 
