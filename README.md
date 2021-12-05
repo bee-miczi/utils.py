@@ -33,7 +33,8 @@ If you get all rigth just run the .py file and your good to go!
 
 ## Liscence
 
-All affars regarding the liscence are in the liscence.md file but in short you are free to remix and remach and re distribute this softwere free of charge
+All affars regarding the liscence are in the liscence.md file but in short: 
+You are free to remix and remach and re distribute this softwere free of charge
 
 ## Contributing
 
