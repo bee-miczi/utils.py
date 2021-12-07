@@ -1,13 +1,17 @@
 #Copyrigth©: beemicizi 2021-2021. You are free to reuse, remix and redistribute this softwere at your pleasing, 
 #as per stated in the liscence.md file
-import sys
-import random
-import time
-import names
+
+#The modules nesceccary 
+import sys,random,time,names, requests
 from threading import Thread
+from pprint import pprint
+#copytigth
 copyrigth = "Copyrigth©: beemicizi 2021-2021"
+#The current available tools, in a list and ready to print
 ut = ["get the number", "countdown", "random name generator", "full cpu prank", "rock paper sciccors"]
+#Main while true loop
 while True:
+    #We welcome and print the tools
     print("Welcome to python utilyties and games!")
     print("Wat wloud you like to do?")
     print("We currently offer: ")
@@ -15,9 +19,10 @@ while True:
         print(u)
     utChoose = input()
 
+    #Get the number code
     if utChoose == "get the number":
+        #Declere variables, and welcome the player
         global playerExit, rns, loadT
-
         loadT = True
         rns = False
         playerExit = False
@@ -41,7 +46,7 @@ while True:
         if playerExit == True:
             sys.exit()
 
-
+        #Generation
         print("Ok generating random number")
         if loadT == True:   
             time.sleep(2)
@@ -52,6 +57,7 @@ while True:
         attempts = 3
         print("Please input a number between 1 and 10")
 
+        #Main while loop, whit attempt count
         while attempts != 0:
             print("You have " + str(attempts) + " attempts left")
             player_choice = int(input())
@@ -77,6 +83,7 @@ while True:
             attempts -= 1
 
     elif utChoose == "countdown":
+        #Countdown timer
         def countdown(t):
             while t:
                 mins, secs = divmod(t, 60)
@@ -88,16 +95,26 @@ while True:
         t = input("Enter the time in seconds: ")
         countdown(int(t))
         print("exiting program")
+    
+    #name generator
     elif utChoose == "name generator":
+        #We welcome the person
         print("Welcome to name generator, want to generate a name? (input y or n)")
         gn = input()
+        exitgn = False
+        loadN = True
         if gn == "y":
             print("Ok strting proccess")
         elif gn == "n":
-                sys.exit()
+                exitgn = True
+        elif gn == "load=0":
+            loadN = False
 
+        if exitgn == True:
+            continue
         time.sleep(5)
 
+        #Selection of names and generating
         print("okey dokey, what type of name. (First, last, full)")
         ton = input()
         print("Want to add a gender? (input m or f)")
@@ -105,15 +122,15 @@ while True:
         print("ok generating\n")
         time.sleep(2)
         while True:
-            if ton == "f":
+            if ton == "first":
                 first = names.get_first_name()
                 print(first)
                 break
-            elif ton == "l":
+            elif ton == "last":
                 last = names.get_last_name()
                 print(last)
                 break
-            elif ton == "fu":
+            elif ton == "full":
                 full = names.get_full_name()
                 print(full)
                 break
@@ -144,6 +161,7 @@ while True:
         print("exiting, thanks for genrating")
     
     elif utChoose == "prank":
+        #Full load cpu prank
         class MyThread(Thread):
             def __init__(self, name,):
                 Thread.__init__(self)
@@ -164,6 +182,7 @@ while True:
         if __name__ == "__main__":
             create_threds()
     elif utChoose == "random numbers for bees":
+        #Random number generation
         print("Welcome to RNB or Random Number for Bees")
         print("How many digits do you want to generate (eg, 7 = 1.000.000-9.999.999) bzz")
         print("Note: only suports up to seven digits")
@@ -212,7 +231,7 @@ while True:
 
         print("exiting program! bzz")
     elif utChoose == "rock paper sciccors":
-
+        #Roock paper sciccors
         global o_r, load, load_1
         o_r = True
         load = True
@@ -303,15 +322,41 @@ while True:
                 break
             
         print("exiting program!")
-    elif utChoose == "todo":
-        print("Welcome to to do")
-        while True:
-            todo = []
-            add_todo = input()
-            todo.append(add_todo)
-            for i in todo:
-                print(i)
+
         time.sleep(1)
+    elif utChoose == "time":
+        currT = time.localtime()
+        curr_clock = time.strftime("%H:%M:%S", currT)
+        print("The current time is " + str(curr_clock))
+    elif utChoose == "password generator":
+        print("Welcome to python password generator!")
+
+        while True:
+            print("want to generate? (input y or n)")
+            select = input()
+            if select == "y":
+                break
+            else:
+                continue
+        chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&%+*().,[]{}§?/0123456789"
+
+        print("Please input the number of passwords!")
+        number_ofPass = input()
+        number_ofPass = int(number_ofPass)
+
+        print("Input the length")
+        length_ofPass = input()
+        length_ofPass = int(length_ofPass)
+        print("ok generating")
+        time.sleep(2)
+
+        print("\nHere are your passwords:")
+        for pwd in range(number_ofPass):
+            password = ""
+            for c in range(length_ofPass):
+                password += random.choice(chars)
+            print(password) 
+
     elif utChoose == "copyrigth":
         print(copyrigth)
         continue
