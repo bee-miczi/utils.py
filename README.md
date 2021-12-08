@@ -33,12 +33,9 @@ Before running the file go to:
 
 Windows 10 or prior: search for cmd and type ```pip install names```
 
-Windows 11: search for windows termianl and type ```pip install names```
+OSX, GNU/Linux and Windows 11: search for windows termianl and type ```pip install names```
 
-Mac OS: search for terminal and type ```pip install names```
-(May not work, use ```pip3 install names intead```)
-
-Linux: search for terminal and type ```pip install names```
+(Note, macos may not work, try ```pip3 install name``` instead)
 
 If you get all rigth just run the utils.py file and your good to go!
 
