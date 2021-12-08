@@ -35,7 +35,7 @@ Windows 10 or prior: search for cmd and type ```pip install names```
 
 OSX, GNU/Linux and Windows 11: search for windows termianl and type ```pip install names```
 
-(Note, macos may not work, try ```pip3 install name``` instead)
+(Note, macos may not work, try ```pip3 install names``` instead)
 
 If you get all rigth just run the utils.py file and your good to go!
 
